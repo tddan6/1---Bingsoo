@@ -5,10 +5,9 @@
 }
 
 body {
-    background-color: black;
+    background-color: #101010;
     color: white;
     font-family: 'Roboto', sans-serif;
-    height: 2000px;
 }
 
 #brand {
@@ -25,7 +24,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 5px 5%;
+    background-color: black;
 }
 
 li, a, button { 
@@ -61,48 +61,125 @@ button:hover {
     background-color: rgba(116,84,59,0.8);
 }
 
+.main-content { 
+    background-image: linear-gradient(transparent .1rem, rgba(66,66,66,0.15)),linear-gradient(90deg,transparent .1rem, rgba(66,66,66,0.15));
+    background-size: 5rem 5rem;
+    position: relative;
+    z-index: 4;
+    box-shadow: 0px 90px 40px rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+
 .left-container {
+    position: relative;
     padding: 50px;
     max-width: 400px;
+    z-index: 5;
 }
 
 .landing-heading {
-    margin-bottom: 50px;
-    font-size: 1.2rem;
+    margin-bottom: 100px;
+    font-size: 1.5rem;
+}
+
+.main-description {
+    width: 300px;
 }
 
 .left-container p {
     opacity: 90%;
-    margin-top: 20px;
 }
 
 .right-container img { 
-    max-width: 700px;
-
+    width: 600px;
+    z-index: 4;
 }
 
+/* .right-container img:hover {
+    filter: blur(2px);
+} */
 
+.bingsoomain1 img { 
+    position: absolute;
+    display: flex;
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 100px;
+}
 
+.card { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0c6af;
+    border: 5px solid gray;
+    border-radius: 30px;
+    width: 150px;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    margin-left: 250px;
+    rotate: 5deg;
+}
+
+.card p {
+    padding: 5px;
+    color: #4e4e4e;
+}
 
 
 
 /* --secondary content-- */
 
 .secondary-content {
-    background-color: #e0c6af;
+    background-color: #212223;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 700px;
-    margin-top: 100px;
+    margin-top: 80px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
 }
+
+.hexagonal-texture { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.hexagonal-texture img { 
+    display: flex;
+    width: 1400px;
+    -webkit-mask-image: linear-gradient(#ffffff, rgba(0,0,0,0.01));
+    mask-image: linear-gradient(#000, rgba(0,0,0,0.01));
+    opacity: 20%;
+    filter: blur(7px);
+    mix-blend-mode: difference;
+}
+
+
 
 .slider {
     width: 800px;
     height: 500px;
     border-radius: 10px;
     overflow: hidden;
+    z-index: 3;
+    border: 5px solid #a8a8a8;
+    box-shadow: 5px 5px 20px 10px rgba(255, 255, 255, 0.2);
 }
+
+.slider:hover {
+    box-shadow: 5px 5px 22px 10px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
 
 .slides {
     width: 600%;
@@ -116,7 +193,7 @@ button:hover {
 }
 
 .slide {
-    transition: 2s;
+    transition: 1.5s;
 }
 
 .slide img { 
@@ -212,44 +289,319 @@ button:hover {
 }
 
 
-/* FAQ Content */
+/* Twin bingsoos */
 
-.third-content {
-    background-color: black;
+.bingsoomain2 img { 
+    position: absolute;
+    width: 200px;
+    height: auto;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 700px;
+    margin-left: -550px;
+    margin-top: -300px;
+    rotate: -5deg;
+    opacity: 80%;
+    z-index: 2;
+}
+
+.bingsoomain2 img:hover {
+    opacity: 100%;
+    transform: scale(105%);
+    transition: 0.5s;
+}
+
+.bingsoomain3 img { 
+    position: absolute;
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 350px;
+    margin-top: -500px;
+    rotate: 5deg;
+    opacity: 80%;
+    z-index: 2;
+}
+
+.bingsoomain3 img:hover {
+    opacity: 100%;
+    transform: scale(105%);
+    transition: 0.5s;
 }
 
 
+.white-vines { 
+    position: absolute;
+    z-index: 2;
+    opacity: 10%;
+    scale: 0.9;
+}
 
 
+.fancy-text p { 
+    font-family: 'Dancing Script', cursive; 
+    font-size: 1.8rem;
+    margin-top: 50px;
+    opacity: 90%;
+    z-index: 2;
+}
 
+/* .fancy-text p:hover {
+    cursor: pointer;
+    background-color: #a28265;
+} */
+
+
+/* FAQ Content */
+
+.third-content {
+    background-image: linear-gradient(#e0c6af, white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1100px;
+    box-shadow: 0px -20px 40px rgba(0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+
+.FAQ-container { 
+    display: flex;
+    flex-direction: column;
+    max-width: 900px; 
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+.layer-1 {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky-1, .sticky-2, .sticky-3, .sticky-4, .sticky-5 {
+    width: 300px;
+    height: 300px;
+}
+
+.layer-2 {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer-3 {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky-question, .sticky-answer { 
+    color: black;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.sticky-question {
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+}
+
+.sticky-answer {
+    font-size: 0.75rem;
+    font-family: 'Comfortaa', cursive;
+}
+
+
+.sticky-1 {
+    margin-left:-150px;
+    z-index: 3;
+    rotate: -3deg;
+}
+
+.sticky-2 {
+    margin-top: 50px;
+    z-index: 3;
+    rotate: -3deg;
+}
+
+.sticky-3 {
+    margin-left: -100px;
+    z-index: 3;
+    rotate: -3deg;
+}
+
+.sticky-4 {
+    margin-top: -50px;
+    z-index: 3;
+    rotate: -3deg;
+}
+
+.sticky-5 {
+    margin-top: 50px;
+    z-index: 3;
+    rotate: -3deg;
+}
+
+
+/* real sticky note */
+
+.real-sticky-note-1 img {
+    width: 350px;
+    position: absolute;
+    z-index: 2;
+    margin-left: -180px;
+    margin-top: -10px;
+}
+
+.real-sticky-note-2 img {
+    width: 350px;
+    position: absolute;
+    z-index: 2;
+    margin-left: 570px;
+    margin-top: 10px;
+}
+
+.real-sticky-note-3 img {
+    width: 350px;
+    position: absolute;
+    z-index: 2;
+    margin-left: 220px;
+    margin-top: 300px;
+}
+
+.real-sticky-note-4 img {
+    width: 350px;
+    position: absolute;
+    z-index: 2;
+    margin-left: -30px;
+    margin-top: 600px;
+}
+
+.real-sticky-note-5 img {
+    width: 350px;
+    position: absolute;
+    z-index: 2;
+    margin-left: 570px;
+    margin-top: 650px;
+}
+
+.polaroid-1 img {
+    width: 700px;
+    position: absolute;
+    z-index: 4;
+    margin-left: -350px;
+    margin-top: 190px;
+    rotate: -5deg;
+}
+
+.polaroid-1 img:hover {
+    transform: scale(101%);
+    transition: 0.5s;
+}
+
+.polaroid-2 img:hover {
+    transform: scale(101%);
+    transition: 0.5s;
+}
+
+.polaroid-2 img {
+    width: 700px;
+    position: absolute;
+    z-index: 4;
+    margin-left: 50px;
+    margin-top: -180px;
+    rotate: 2deg;
+}
+
+.polaroids {
+    z-index: 5;
+}
+
+
+.bingsoo-sticker-1 img {
+    width: 550px;
+    position: absolute;
+    z-index: 4;
+    margin-left: 650px;
+    margin-top: 300px;
+}
+
+.bingsoo-sticker-2 img {
+    width: 800px;
+    position: absolute;
+    z-index: 4;
+    margin-left: 50px;
+    margin-top: 500px;
+    rotate: 2deg;
+}
+
+
+/* footer */
+
+footer { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.website {
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
 
 
 
 /* --media-- */
 
+
+
+
 @media (min-width: 576px) {
     .main-content {
+        height: 800px;
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 1440px;
     }
+
+    .main-container { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+
 
     .left-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 600px;
+        margin-top: 80px;
     }
-
 
 
     .right-container {
         display: flex;
-        margin-left: auto;
-
+        margin-top: 80px;
     }
+
 }
+
+
